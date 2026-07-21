@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'Inter', sans-serif;
+  }
+  
+  body {
+    @apply bg-dark-bg text-gray-300 overflow-x-hidden selection:bg-neon-purple/30 selection:text-neon-cyan;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(189, 0, 255, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 50% 50%, rgba(0, 255, 216, 0.05) 0%, transparent 60%);
+    background-attachment: fixed;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-bg;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #bd00ff, #00f0ff);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00f0ff, #00ffd8);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] rounded-2xl shadow-glass transition-all duration-300;
+  }
+  
+  .glass-card-hover {
+    @apply hover:bg-white/[0.06] hover:border-white/[0.15] hover:shadow-[0_8px_32px_0_rgba(189,0,255,0.15)] hover:-translate-y-1;
+  }
+  
+  .neon-border-blue {
+    @apply border border-neon-blue/30 hover:border-neon-blue hover:shadow-glow-blue;
+  }
+  
+  .neon-border-purple {
+    @apply border border-neon-purple/30 hover:border-neon-purple hover:shadow-glow-purple;
+  }
+  
+  .neon-border-cyan {
+    @apply border border-neon-cyan/30 hover:border-neon-cyan hover:shadow-glow-cyan;
+  }
+  
+  .text-glow-blue {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
+  }
+  
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(189, 0, 255, 0.6);
+  }
+  
+  .text-glow-cyan {
+    text-shadow: 0 0 10px rgba(0, 255, 216, 0.6);
+  }
+  
+  .btn-neon {
+    @apply relative overflow-hidden px-6 py-3 rounded-full font-semibold transition-all duration-300 text-white z-10;
+    background: linear-gradient(90deg, #00f0ff, #bd00ff, #00ffd8);
+    background-size: 200% auto;
+  }
+  
+  .btn-neon:hover {
+    background-position: right center;
+    box-shadow: 0 0 20px rgba(189, 0, 255, 0.6);
+    transform: scale(1.03);
+  }
+  
+  .btn-outline-neon {
+    @apply relative px-6 py-3 rounded-full font-semibold transition-all duration-300 border text-white bg-transparent;
+    border-image: linear-gradient(90deg, #00f0ff, #bd00ff) 1;
+  }
+  
+  .btn-outline-neon:hover {
+    @apply bg-white/5;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+  }
+}
+
+/* Custom styles for animations & particles */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(3deg); }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Hide default cursor on desktop */
+@media (min-width: 1024px) {
+  .custom-cursor-active {
+    cursor: none;
+  }
+  .custom-cursor-active a,
+  .custom-cursor-active button,
+  .custom-cursor-active input,
+  .custom-cursor-active textarea,
+  .custom-cursor-active [role="button"] {
+    cursor: none;
+  }
+}
