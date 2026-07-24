@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import locationAiImg from '../assets/location_ai.png';
+import portfolioImg from '../assets/portfolio_screenshot.png';
+
 const categories = ['All', 'Full-Stack', 'AI & Python', 'Data Analytics'];
 
 const projectsData = [
   {
     title: 'Location AI',
     category: 'AI & Python',
-    image: null,
+    image: locationAiImg,
     description: 'An intelligent location-based AI assistant dashboard that integrates AI workflows with modern mapping and location intelligence APIs.',
     tech: ['JavaScript', 'React', 'Node.js', 'Vercel'],
     github: 'https://github.com/veer7352/location-ai',
@@ -16,7 +19,7 @@ const projectsData = [
   {
     title: '3D Cyber Portfolio',
     category: 'Full-Stack',
-    image: null,
+    image: portfolioImg,
     description: 'A premium, state-of-the-art developer portfolio website built with React, Three.js, GSAP, and TailwindCSS.',
     tech: ['React', 'Three.js', 'Framer Motion', 'TailwindCSS', 'GSAP'],
     github: 'https://github.com/veer7352/portfolio',
