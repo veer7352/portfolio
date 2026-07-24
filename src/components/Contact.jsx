@@ -106,8 +106,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-[10px] font-mono text-gray-500 uppercase tracking-wider">Email</p>
-                  <a href="mailto:dharamveer@example.com" className="text-sm font-semibold text-white hover:text-neon-cyan transition-colors duration-300">
-                    dharamveer@example.com
+                  <a href="mailto:dharamveerkumar49632@gmail.com" className="text-sm font-semibold text-white hover:text-neon-cyan transition-colors duration-300">
+                    dharamveerkumar49632@gmail.com
                   </a>
                 </div>
               </div>
@@ -118,8 +118,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-[10px] font-mono text-gray-500 uppercase tracking-wider">Phone</p>
-                  <a href="tel:+910000000000" className="text-sm font-semibold text-white hover:text-neon-cyan transition-colors duration-300">
-                    +91 98765 43210
+                  <a href="tel:+916200801686" className="text-sm font-semibold text-white hover:text-neon-cyan transition-colors duration-300">
+                    +91 62008 01686
                   </a>
                 </div>
               </div>

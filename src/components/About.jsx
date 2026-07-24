@@ -4,14 +4,14 @@ import { FiBookOpen, FiCode, FiCpu, FiTrendingUp } from 'react-icons/fi';
 
 const timelineData = [
   {
-    year: '2024 - Present',
+    year: '2025 - 2027',
     degree: 'Master of Computer Applications (MCA)',
     institution: 'Aspiring Full Stack & AI Professional',
     description: 'Deepening knowledge in advanced software engineering, data structures, algorithms, databases, and AI methods.'
   },
   {
-    year: '2020 - 2023',
-    degree: 'Bachelor of Science (B.Sc.)',
+    year: '2022 - 2025',
+    degree: 'Bachelor of Computer Applications (BCA)',
     institution: 'Graduation Degree',
     description: 'Developed solid analytical thinking, core computer science principles, statistical modelling foundations, and programming basics.'
   }
