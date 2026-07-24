@@ -1,38 +1,26 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
-import aiSaas from '../assets/ai_saas.jpg';
-import ecommerce from '../assets/ecommerce.jpg';
-
 const categories = ['All', 'Full-Stack', 'AI & Python', 'Data Analytics'];
 
 const projectsData = [
   {
-    title: 'AI-Powered SaaS Assistant',
+    title: 'Location AI',
     category: 'AI & Python',
-    image: aiSaas,
-    description: 'An intelligent orchestration dashboard using Python backends and modern LLMs to automate support tickets, summarize queries, and report user trends.',
-    tech: ['React', 'FastAPI', 'Python', 'OpenAI API', 'Tailwind'],
-    github: 'https://github.com',
-    live: 'https://example.com'
+    image: null,
+    description: 'An intelligent location-based AI assistant dashboard that integrates AI workflows with modern mapping and location intelligence APIs.',
+    tech: ['JavaScript', 'React', 'Node.js', 'Vercel'],
+    github: 'https://github.com/veer7352/location-ai',
+    live: 'https://ai-assistant-ecru-mu.vercel.app'
   },
   {
-    title: 'E-Commerce Microservices Engine',
+    title: '3D Cyber Portfolio',
     category: 'Full-Stack',
-    image: ecommerce,
-    description: 'A modular, high-scale digital marketplace engine featuring sub-second cart caching, secure mock payments, and full admin control panels.',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Redux'],
-    github: 'https://github.com',
-    live: 'https://example.com'
-  },
-  {
-    title: 'Data Visualizer Platform',
-    category: 'Data Analytics',
-    image: null, // fallback gradient
-    description: 'An analytics portal importing raw CSV/Excel datasets and producing beautiful interactive charts with forecasting models and Trendline analytics.',
-    tech: ['Python', 'Pandas', 'React', 'Chart.js', 'PowerBI API'],
-    github: 'https://github.com',
-    live: 'https://example.com'
+    image: null,
+    description: 'A premium, state-of-the-art developer portfolio website built with React, Three.js, GSAP, and TailwindCSS.',
+    tech: ['React', 'Three.js', 'Framer Motion', 'TailwindCSS', 'GSAP'],
+    github: 'https://github.com/veer7352/portfolio',
+    live: 'https://portfolio-beige-theta-79.vercel.app'
   }
 ];
 
@@ -96,7 +84,7 @@ export default function Projects() {
                   <div className="w-full h-full bg-gradient-to-br from-neon-purple/20 via-dark-card to-neon-cyan/20 flex items-center justify-center relative">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,240,255,0.15)_0,transparent_60%)]"></div>
                     <span className="text-neon-cyan text-xs font-mono tracking-widest border border-neon-cyan/20 px-4 py-2 rounded bg-black/50 backdrop-blur-md uppercase">
-                      Analytics Pipeline
+                      {project.title}
                     </span>
                   </div>
                 )}
