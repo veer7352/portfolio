@@ -14,7 +14,7 @@ const projectsData = [
     description: 'An intelligent location-based AI assistant dashboard that integrates AI workflows with modern mapping and location intelligence APIs.',
     tech: ['JavaScript', 'React', 'Node.js', 'Vercel'],
     github: 'https://github.com/veer7352/location-ai',
-    live: 'https://ai-assistant-ecru-mu.vercel.app'
+    live: 'https://location-ai-tau.vercel.app'
   },
   {
     title: '3D Cyber Portfolio',
@@ -121,24 +121,30 @@ export default function Projects() {
 
                 {/* Card Action Buttons */}
                 <div className="flex items-center justify-between border-t border-white/5 pt-4">
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="flex items-center space-x-1.5 text-xs text-gray-400 hover:text-neon-blue transition-colors duration-300 font-mono"
-                  >
-                    <FiGithub className="w-4 h-4" />
-                    <span>Source</span>
-                  </a>
-                  <a 
-                    href={project.live} 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="flex items-center space-x-1.5 text-xs text-neon-cyan hover:underline transition-all duration-300 font-mono"
-                  >
-                    <span>Live Demo</span>
-                    <FiExternalLink className="w-3.5 h-3.5" />
-                  </a>
+                  {project.github ? (
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="flex items-center space-x-1.5 text-xs text-gray-400 hover:text-neon-blue transition-colors duration-300 font-mono"
+                    >
+                      <FiGithub className="w-4 h-4" />
+                      <span>Source</span>
+                    </a>
+                  ) : (
+                    <div />
+                  )}
+                  {project.live && (
+                    <a 
+                      href={project.live} 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="flex items-center space-x-1.5 text-xs text-neon-cyan hover:underline transition-all duration-300 font-mono"
+                    >
+                      <span>Live Demo</span>
+                      <FiExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
