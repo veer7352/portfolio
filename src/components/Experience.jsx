@@ -6,28 +6,10 @@ const experienceData = [
   {
     type: 'internship',
     icon: <FiBriefcase className="w-5 h-5" />,
-    role: 'Python Full Stack Intern',
-    company: 'Tech Solutions Inc.',
-    duration: '6 Months',
-    details: 'Developed backend API endpoints using Django/Flask. Integrated React frontend layers, optimized SQL database queries, and implemented user authentication workflows.',
-    color: 'border-neon-blue'
-  },
-  {
-    type: 'training',
-    icon: <FiAward className="w-5 h-5" />,
-    role: 'AI & Data Science Specialist',
-    company: 'Cognitive Learning Labs',
-    duration: '3 Months Training',
-    details: 'Completed advanced neural networks training. Designed image classification and text analysis workflows. Built live models and reported insights via Power BI dashboards.',
-    color: 'border-neon-purple'
-  },
-  {
-    type: 'achievement',
-    icon: <FiStar className="w-5 h-5" />,
-    role: 'Hackathon Finalist & Top Contributor',
-    company: 'University Developer Circle',
-    duration: '2025',
-    details: 'Collaborated in team projects to build AI-driven web layers. Contributed to various open source modules and templates on GitHub.',
+    role: 'Web Development Intern',
+    company: 'Skill Nexis',
+    duration: '6 Weeks',
+    details: 'Completed a 6-week online internship program in Web Development, gaining hands-on coding and application design experience.',
     color: 'border-neon-cyan'
   }
 ];

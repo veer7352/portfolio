@@ -146,7 +146,7 @@ export default function Contact() {
                 <FiLinkedin className="w-5 h-5" />
               </a>
               <a 
-                href="https://github.com" 
+                href="https://github.com/veer7352" 
                 target="_blank" 
                 rel="noreferrer"
                 className="p-3.5 rounded-xl bg-white/[0.02] border border-white/10 text-gray-400 hover:text-neon-purple hover:border-neon-purple hover:shadow-glow-purple transition-all duration-300"

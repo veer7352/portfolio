@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ThreeCanvas from './ThreeCanvas';
+import dharamveerPhoto from '../assets/dharamveer.jpg';
 
 const roles = ['Python Full Stack Developer', 'Web Developer', 'AI Enthusiast'];
 
@@ -52,6 +53,17 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-neon-blue/10 blur-[120px] rounded-full"></div>
       <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-neon-purple/10 blur-[120px] rounded-full"></div>
 
+      {/* Background Profile Photo - High Visibility Watermark */}
+      <div className="absolute right-0 bottom-0 w-full lg:w-[48%] h-[60%] lg:h-[95%] pointer-events-none select-none z-0">
+        <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-transparent to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-dark-bg via-transparent to-transparent z-10"></div>
+        <img 
+          src={dharamveerPhoto} 
+          alt="Dharamveer Background" 
+          className="w-full h-full object-cover lg:object-contain object-right-bottom filter saturate-100 brightness-100 contrast-100"
+        />
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full z-10">
         
         {/* Left Intro Text Column */}
@@ -102,15 +114,13 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right 3D Visualizer Column */}
+        {/* Right Column (Empty foreground to let background photo show clearly) */}
         <motion.div 
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-          className="lg:col-span-5 w-full flex justify-center"
-        >
-          <ThreeCanvas />
-        </motion.div>
+          className="lg:col-span-5 w-full min-h-[300px] lg:min-h-[500px]"
+        />
       </div>
     </section>
   );
